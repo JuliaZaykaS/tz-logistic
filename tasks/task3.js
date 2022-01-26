@@ -10,3 +10,25 @@
 // [0, 2, 0, 1, 23] -> [4.73, "*****"]
 // [16, 17, 23, 40, 45] -> [3.57, "****"]
 // [55, 67, 98, 115, 61] -> [3.15, "***"]
+
+const getAverageRating = (arr) => {
+  //умножаем количество оценок на их вес(количество звезд) и записываем в массив
+  const weightOfBalls = arr.map((el, index) => el * (index + 1));
+  //суммируем все веса оценок
+  const allWeight = weightOfBalls.reduce((acc, el) => (acc = acc + el), 0);
+  //получаем общее количество голосов
+  const allRating = arr.reduce((acc, el) => (acc = acc + el), 0);
+  // рассчитываем средний рейтинг
+  const averageRating = (allWeight / allRating).toFixed(2);
+  // создаем строку из количества звезд
+  const stingOfStars = Array.from(
+    Array(Math.round(averageRating)),
+    () => "*"
+  ).join("");
+
+  return [Number(averageRating), stingOfStars];
+};
+
+console.log(getAverageRating([0, 2, 0, 1, 23]));
+console.log(getAverageRating([16, 17, 23, 40, 45]));
+console.log(getAverageRating([55, 67, 98, 115, 61]));
