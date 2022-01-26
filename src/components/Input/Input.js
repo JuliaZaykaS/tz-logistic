@@ -1,21 +1,21 @@
 import React from "react";
 import s from './Input.module.css'
 
-export const Input = ({ type, value, name, readOnly }) => {
+export const Input = ({ type, value, name, onChange, style='' }) => {
   return (
     <input
     type={type}
     value={value}
     name={name}
-    readOnly={readOnly}
-    className={s.input}
+    onChange={onChange}
+    className={`${s.input} ${style}`}
     ></input>
   );
 };
 
-export const Select = ({ list}) => {
+export const Select = ({ list, style=''}) => {
   return (
-      <select className={s.input}>
+      <select className={`${s.input} ${style}`}>
         {list.map((el) => {
           return (
             <option key={el.id} value={el.name}>
@@ -28,6 +28,10 @@ export const Select = ({ list}) => {
   );
 };
 
-export const Textarea = ({ value, readOnly }) => {
-  return <textarea value={value} readOnly={readOnly}></textarea>;
+export const Textarea = ({ value, onChange }) => {
+  return <textarea
+  className={s.textarea}
+  value={value}
+  onChange={onChange}
+  ></textarea>;
 };

@@ -4,9 +4,14 @@
 
 }
 
+.form label:not(:last-child){
+margin-bottom: 10px;
+}
+
 .inputWithIcon{
     display: flex;
     align-items: center;
+    width: 100%;
 
 }
 
@@ -19,4 +24,31 @@
     border-bottom-left-radius: 5px;
     border: 2px solid grey;
     border-right: none;
+}
+.commentTitle{
+text-transform: none;
+}
+
+.conditions{
+    width: 340px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.truckInfo{
+    text-transform: none;
+    font-weight: 400;
+}
+
+.truckNumbers{
+    font-weight: 600;
+}
+
+.calendar input{
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid grey;
+    padding: 5px;
+    width: 300px;
 }

@@ -2,4 +2,10 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    font-weight: 500;
+    color: darkslategrey;
+}
+
+.labelTitle{
+    margin-bottom: 5px;
 }

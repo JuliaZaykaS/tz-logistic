@@ -1,42 +1,40 @@
-.App{
-    /* background-color: grey; */
-    background-color: white;
-    padding: 5px;
-    display: flex;
-    height: 100vh;
+.App {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  height: 100vh;
 }
 
-.leftSide{
-    width: 50%;
-    margin-right: 50px;
+.leftSide {
+  width: 50%;
+  margin-right: 50px;
 }
 
-.rightSide{
-    width: 50%;
+.rightSide {
+  width: 50%;
 }
 
-.formTitle{
-display: flex;
-/* justify-content: center; */
-align-items: center;
+.formTitle {
+  display: flex;
+  align-items: center;
 }
 
-.mainSubtitle{
-    margin-right: 20px;
+.mainSubtitle {
+  margin-right: 20px;
 }
 
-.waiting{
-    font-size: 18px;
-    font-weight: 700;
-
+.waiting {
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.info{
-    font-size: 16px;
-    color: rgb(46, 39, 39);
+.info {
+  font-size: 16px;
+  color: rgb(46, 39, 39);
+  margin-bottom: 10px;
 }
 
-.attention{
-    font-size: 12px;
-    color: rgb(92, 84, 84);
+.attention {
+  font-size: 12px;
+  color: rgb(92, 84, 84);
 }

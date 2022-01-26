@@ -20,7 +20,6 @@ function App() {
         ></Text>
         <Text>
           <span className={s.attention}>
-
             Поля, помеченные <Star /> являются обязательными для заполнения.
           </span>
         </Text>
