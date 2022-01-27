@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a91e957.css",
-    "main.js": "/static/js/main.ab75cbbe.js",
-    "static/media/icons-sprite.svg": "/static/media/icons-sprite.da3c492b04a195eeca1c396c2ea074c2.svg",
-    "index.html": "/index.html",
-    "main.1a91e957.css.map": "/static/css/main.1a91e957.css.map",
-    "main.ab75cbbe.js.map": "/static/js/main.ab75cbbe.js.map"
+    "main.css": "/tz-logistic/static/css/main.1a91e957.css",
+    "main.js": "/tz-logistic/static/js/main.1c44f2f6.js",
+    "static/media/icons-sprite.svg": "/tz-logistic/static/media/icons-sprite.da3c492b04a195eeca1c396c2ea074c2.svg",
+    "index.html": "/tz-logistic/index.html",
+    "main.1a91e957.css.map": "/tz-logistic/static/css/main.1a91e957.css.map",
+    "main.1c44f2f6.js.map": "/tz-logistic/static/js/main.1c44f2f6.js.map"
   },
   "entrypoints": [
     "static/css/main.1a91e957.css",
-    "static/js/main.ab75cbbe.js"
+    "static/js/main.1c44f2f6.js"
   ]
 }
