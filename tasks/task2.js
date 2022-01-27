@@ -10,3 +10,45 @@
 // [1, 3, 4], [1, 2, 6] -> [1, 1, 2, 3, 4, 6]
 // [1, 2, 3, 4], [2, 5, 10] -> [1, 2, 2, 3, 4, 5, 10]
 // [1, 3, 2], [1, 2, 3] -> Error
+
+//*********
+
+//создаем функцию, которая будет проверять, отсортирован ли массив
+const getIsArraySorted = (array) => {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > array[i + 1]) return false;
+  }
+};
+
+const getIntegrationForArrays = (arr1, arr2, result) => {
+  //проверяем переданные массивы на сортировку, если не отсортирован какой-то из них, то выходим из функции и пишем Error
+  if (getIsArraySorted(arr1) === false || getIsArraySorted(arr2) === false)
+    return "Error";
+  //присваиваем в result или пустой массив, если функция запущена 1й раз, или результат ее прошлой работы
+  result = result || [];
+  //записываем массивы во временные переменные, чтобы не мутировать входящие
+  let tmpArr1 = arr1;
+  let tmpArr2 = arr2;
+  //проверяем, после очередного выполнения функции остались ли в массивах незаписанные элементы,
+  // если оба пусты, то возвращаем конечный результат
+  if (tmpArr1.length === 0 && tmpArr2.length === 0) return result;
+  //также проверяем, если элементы в одном из массивов закончились, то остаток второго добавляем в конец
+  if (tmpArr1.length !== 0 && tmpArr2.length === 0)
+    return (result = [...result, ...tmpArr1]);
+  if (tmpArr2.length !== 0 && tmpArr1.length === 0)
+    return (result = [...result, ...tmpArr2]);
+  //   if (tmpArr1.length === 0 && tmpArr2.length === 0) return result;
+  //сравниваем первые элементы массивов, записываем в результирующий наименьший из них
+  //вместе с этим удаляем этот элемент из исходного массива
+  if (tmpArr1[0] < tmpArr2[0]) {
+    result.push(tmpArr1.shift());
+  } else {
+    result.push(tmpArr2.shift());
+  }
+
+  return getIntegrationForArrays(tmpArr1, tmpArr2, result);
+};
+
+console.log(getIntegrationForArrays([1, 3, 4], [1, 2, 6]));
+console.log(getIntegrationForArrays([1, 2, 3, 4], [2, 5, 10]));
+console.log(getIntegrationForArrays([1, 3, 2], [1, 2, 3]));
