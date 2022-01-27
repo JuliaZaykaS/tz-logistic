@@ -14,3 +14,26 @@
 // {x: 0, y: 1} -> 1
 // {x: 1, y: 1} -> 2
 // {x: 2, y: 2} -> 6
+
+
+// создадим функцию для расчета факториала
+function factorial(n, result){
+    result = result || 1;
+    if(!n){
+        return result;
+    }else{
+        return factorial(n-1, result*n);
+    }
+}
+
+const getAmountPaths = (coords)=>{
+const {x,y}= coords;
+const factorialX = factorial(x)
+const factorialY = factorial(y)
+const factorialXY = factorial(x+y) //факториал от общего количества перемещений
+return factorialXY/(factorialX*factorialY)
+}
+
+console.log(getAmountPaths({x: 0, y: 1}));
+console.log(getAmountPaths({x: 1, y: 1}));
+console.log(getAmountPaths({x: 2, y: 2}));
